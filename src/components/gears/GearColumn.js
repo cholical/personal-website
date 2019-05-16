@@ -5,7 +5,7 @@ import Gear from './Gear';
 
 class GearColumn extends React.Component {
 	
-	constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -17,15 +17,15 @@ class GearColumn extends React.Component {
 
   }
 
-	componentDidMount() {
+  componentDidMount() {
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll.bind(this));
-	}
+  }
 	
-	handleScroll(event) {
+  handleScroll(event) {
     this.setState(() => ({rot: this.calculateRotationPosition()}));
   }
 
@@ -41,7 +41,7 @@ class GearColumn extends React.Component {
     return '-' + height / this.state.numberOfGears / 2 + 'px';
   }
 	
-	render() {
+  render() {
     
     let gears = [];
     for (let i = 0; i < this.state.numberOfGears; i++) {

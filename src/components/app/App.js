@@ -1,41 +1,31 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Home from '../Home/Home';
+import Projects from '../Projects/Projects';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
 import './App.css';
-import Filler from '../shared/filler/Filler';
-import GearColumn from '../gears/GearColumn';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: window.innerWidth,
-      height: window.innerHeight
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateWindowDimensions.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
-	}
-  
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
-
   render() {
     return (
-      <div className="App">
-        <div>
-          Ronald Ding's Website
-        </div>
-        <Filler count="100"></Filler>
-        <GearColumn side="left" height={this.state.height} width={this.state.width}></GearColumn>
-        <GearColumn side="right" height={this.state.height} width={this.state.width}></GearColumn>
+      <div>
+
+        {/* Navbar */}
+        <Router>
+          <Link to="/">Home</Link>
+          <Link to="/projects/">Projects</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+
+          <Route exact path="/" component={Home}/>
+          <Route path="/projects/" component={Projects}/>
+          <Route path="/about/" component={About}/>
+          <Route path="/contact/" component={Contact}/>
+        </Router>
       </div>
-    )
+    );
   }
 
 }

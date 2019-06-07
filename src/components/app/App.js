@@ -11,8 +11,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-
-        {/* Navbar */}
         <Router>
           <Link to="/">Home</Link>
           <Link to="/projects/">Projects</Link>
@@ -27,7 +25,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;

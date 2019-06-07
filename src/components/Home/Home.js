@@ -12,7 +12,7 @@ class Home extends React.Component {
 		this.state = {
 				homeTitle: 'Ronald Ding',
 				homeSubtitle: 'Software Engineer, Consultant',
-				homeDescription: 'Welcome to my website. I am a software engineer and consultant. Feel free to browse through my projects, give feedback, and reach out.'
+				homeDescription: 'Welcome to my WIP website! I am a software engineer, consultant, and business enthusiast. Feel free to browse through my projects, give feedback, and reach out.'
 		}
 	}
 	
@@ -32,7 +32,9 @@ class Home extends React.Component {
 				<div className="home-description">
 					{this.state.homeDescription}
 				</div>
-				<ClearButton onClick={this.goToProjects}>Projects</ClearButton>
+				<div className="home-button">
+					<ClearButton onClick={this.goToProjects}>Projects</ClearButton>
+				</div>
 			</div>
 		)
 	}

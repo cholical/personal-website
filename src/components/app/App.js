@@ -12,10 +12,12 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <Link to="/">Home</Link>
-          <Link to="/projects/">Projects</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <div className="app-navbar">
+            <Link to="/">Home</Link>
+            <Link to="/projects/">Projects</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
 
           <Route exact path="/" component={Home}/>
           <Route path="/projects/" component={Projects}/>

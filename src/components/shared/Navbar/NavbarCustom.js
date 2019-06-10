@@ -1,19 +1,29 @@
 import React from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './NavbarCustom.css';
 
 class NavbarCustom extends React.Component {
 
-	render () {
+	constructor(props) {
+		super(props);
+		this.test = this.test.bind(this);
+	}
+
+	test() {
+		console.log('test');
+	}
+
+	render() {
 		return (
-			<Navbar expand="md">
+			<Navbar expand="md" variant="dark" collapseOnSelect="true" fixed="top">
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="mr-auto">
-						<Nav.Link to={'/'} className="nav-link">Home</Nav.Link>
-						<Nav.Link to={'/projects/'} className="nav-link">Projects</Nav.Link>
-						<Nav.Link to={'/about/'} className="nav-link">About</Nav.Link>
-						<Nav.Link to={'/contact'} className="nav-link">Contact</Nav.Link>
+					<Nav>
+						<Nav.Link onSelect={this.test} as={Link} to="/">Home</Nav.Link>
+						<Nav.Link as={Link} to="/projects/" >Projects</Nav.Link>
+						<Nav.Link as={Link} to="/about/">About</Nav.Link>
+						<Nav.Link as={Link} to="/contact/">Contact</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>

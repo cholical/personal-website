@@ -4,7 +4,7 @@ import ClearButton from '../shared/ClearButton/ClearButton';
 
 class Home extends React.Component {
 
-	constructor (props) {
+	constructor(props) {
 		super(props);
 
 		this.goToProjects = this.goToProjects.bind(this);
@@ -16,28 +16,26 @@ class Home extends React.Component {
 		}
 	}
 	
-	goToProjects () {
+	goToProjects() {
 		this.props.history.push('/projects/');
 	}
 
-	render () {
+	render() {
 		return (
-			<>
-				<div className="home-container">
-					<div className="home-title">
-						{this.state.homeTitle}
-					</div>
-					<div className="home-subtitle">
-						{this.state.homeSubtitle}
-					</div>
-					<div className="home-description">
-						{this.state.homeDescription}
-					</div>
-					<div className="home-button">
-						<ClearButton onClick={this.goToProjects}>Projects</ClearButton>
-					</div>
+			<div className="home-container">
+				<div className="home-title">
+					{this.state.homeTitle}
 				</div>
-			</>
+				<div className="home-subtitle">
+					{this.state.homeSubtitle}
+				</div>
+				<div className="home-description">
+					{this.state.homeDescription}
+				</div>
+				<div className="home-button">
+					<ClearButton onClick={this.goToProjects}>Projects</ClearButton>
+				</div>
+			</div>
 		)
 	}
 }

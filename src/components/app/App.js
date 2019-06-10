@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import NavbarCustom from '../shared/Navbar/NavbarCustom';
 import Home from '../Home/Home';
 import Projects from '../Projects/Projects';
 import About from '../About/About';
@@ -12,13 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <div className="app-navbar">
-            <Link to="/">Home</Link>
-            <Link to="/projects/">Projects</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
-
+          <NavbarCustom></NavbarCustom>
           <Route exact path="/" component={Home}/>
           <Route path="/projects/" component={Projects}/>
           <Route path="/about/" component={About}/>

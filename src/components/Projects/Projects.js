@@ -1,12 +1,17 @@
 import React from 'react';
-import Filler from '../shared/Filler/Filler';
+import { Container, Row, Col } from 'react-bootstrap';
 import './Projects.css';
 
 class Projects extends React.Component {
 	render() {
+		// Parallax in the background
 		return (
-			<div>
-				<Filler count="100"></Filler>
+			<div className="custom-container">
+				<Container>
+				<Row className="justify-content-md-center">
+					<Col md="auto">Projects</Col>
+				</Row>
+				</Container>
 			</div>
 		)
 	}

@@ -54,7 +54,7 @@ class NavbarCustom extends React.Component {
 			</Navbar>
 		);
 	}
-
+	
 }
 
 export default NavbarCustom;

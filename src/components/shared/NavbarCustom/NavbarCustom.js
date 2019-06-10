@@ -41,7 +41,7 @@ class NavbarCustom extends React.Component {
 
 	render() {
 		return (
-			<Navbar expand="md" bg={this.state.expandedColor ? "dark" : ""} variant="dark" collapseOnSelect="true" fixed="top" onToggle={this.toggleNavbar} expanded={this.state.expanded}>
+			<Navbar expand="lg" bg={this.state.expandedColor ? "dark" : ""} variant="dark" collapseOnSelect="true" fixed="top" onToggle={this.toggleNavbar} expanded={this.state.expanded}>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav>

@@ -11,7 +11,7 @@ class Home extends React.Component {
 
 		this.state = {
 				homeTitle: 'Ronald Ding',
-				homeSubtitle: 'Software Engineer, Consultant',
+				homeSubtitle: 'Software Engineer',
 				homeDescription: 'Welcome to my WIP personal website! Feel free to browse through my projects, give feedback, and reach out.'
 		}
 	}
